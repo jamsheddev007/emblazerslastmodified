@@ -132,7 +132,7 @@ export default function CurriculumLoginPage() {
               <form onSubmit={handleAdminLogin} className="space-y-4">
                 <div className="space-y-2">
                   <Label htmlFor="email">Email</Label>
-                  <Input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="admin@emblazers.com" required data-testid="input-email" />
+                  <Input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="admin@emblazersacademy.com" required data-testid="input-email" />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="password">Password</Label>

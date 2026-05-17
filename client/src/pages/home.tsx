@@ -6,7 +6,7 @@ import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { GraduationCap, ArrowRight } from "lucide-react";
 
 const PORTAL_IDS = ["student-portal", "parent", "staff-portal"];
-const ADMIN_IDS = ["student", "fee", "payroll", "finance", "attendance", "curriculum", "pos", "library", "transport", "hostel", "reports"];
+const ADMIN_IDS = ["student", "fee", "hr", "finance", "attendance", "curriculum", "pos", "library", "transport", "hostel", "reports"];
 
 const portals = PORTAL_IDS.map(id => moduleConfigs[id]).filter(Boolean);
 const adminModules = ADMIN_IDS.map(id => moduleConfigs[id]).filter(Boolean);

@@ -66,8 +66,8 @@ export const moduleConfigs: Record<string, ModuleConfig> = {
     dashboardPath: "/fee/dashboard",
     description: "Manage fee vouchers, payments, and collections",
   },
-  payroll: {
-    id: "payroll",
+  hr: {
+    id: "hr",
     name: "HR & Payroll Module",
     shortName: "HR & Payroll",
     icon: CreditCard,

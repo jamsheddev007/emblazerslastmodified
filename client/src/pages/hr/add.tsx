@@ -128,7 +128,7 @@ export default function AddStaff() {
                   <FormItem>
                     <FormLabel>Email *</FormLabel>
                     <FormControl>
-                      <Input type="email" {...field} placeholder="email@emblazers.com" data-testid="input-email" />
+                      <Input type="email" {...field} placeholder="email@emblazersacademy.com" data-testid="input-email" />
                     </FormControl>
                     <FormMessage />
                   </FormItem>

@@ -907,20 +907,20 @@ export type InsertBranch = z.infer<typeof insertBranchSchema>;
 
 // ============== MODULE CREDENTIALS ==============
 export const moduleCredentials = {
-  student: { email: "student@emblazers.com", password: "12345678" },
-  hr: { email: "hr@emblazers.com", password: "12345678" },
-  fee: { email: "fee@emblazers.com", password: "12345678" },
-  payroll: { email: "payroll@emblazers.com", password: "12345678" },
-  finance: { email: "finance@emblazers.com", password: "12345678" },
-  attendance: { email: "attendance@emblazers.com", password: "12345678" },
-  timetable: { email: "timetable@emblazers.com", password: "12345678" },
-  datesheet: { email: "datesheet@emblazers.com", password: "12345678" },
-  curriculum: { email: "admin@emblazers.com", password: "12345678" },
-  pos: { email: "pos@emblazers.com", password: "12345678" },
-  library: { email: "library@emblazers.com", password: "12345678" },
-  transport: { email: "transport@emblazers.com", password: "12345678" },
-  hostel: { email: "hostel@emblazers.com", password: "12345678" },
-  reports: { email: "reports@emblazers.com", password: "12345678" },
+  student: { email: "student@emblazersacademy.com", password: "12345678" },
+  hr: { email: "hr@emblazersacademy.com", password: "12345678" },
+  fee: { email: "fee@emblazersacademy.com", password: "12345678" },
+  payroll: { email: "payroll@emblazersacademy.com", password: "12345678" },
+  finance: { email: "finance@emblazersacademy.com", password: "12345678" },
+  attendance: { email: "attendance@emblazersacademy.com", password: "12345678" },
+  timetable: { email: "timetable@emblazersacademy.com", password: "12345678" },
+  datesheet: { email: "datesheet@emblazersacademy.com", password: "12345678" },
+  curriculum: { email: "admin@emblazersacademy.com", password: "12345678" },
+  pos: { email: "pos@emblazersacademy.com", password: "12345678" },
+  library: { email: "library@emblazersacademy.com", password: "12345678" },
+  transport: { email: "transport@emblazersacademy.com", password: "12345678" },
+  hostel: { email: "hostel@emblazersacademy.com", password: "12345678" },
+  reports: { email: "reports@emblazersacademy.com", password: "12345678" },
 } as const;
 
 export type ModuleType = keyof typeof moduleCredentials | "parent";
@@ -1934,21 +1934,21 @@ export const rolePermissions: Record<UserRole, PermissionAction[]> = {
 } as const;
 
 export const moduleUserCredentials: Record<ModuleType, { email: string; password: string; role: UserRole; name: string }> = {
-  student: { email: "student@emblazers.com", password: "12345678", role: "admin", name: "Student Admin" },
-  hr: { email: "hr@emblazers.com", password: "12345678", role: "admin", name: "HR Admin" },
-  fee: { email: "fee@emblazers.com", password: "12345678", role: "admin", name: "Fee Admin" },
-  payroll: { email: "payroll@emblazers.com", password: "12345678", role: "admin", name: "Payroll Admin" },
-  finance: { email: "finance@emblazers.com", password: "12345678", role: "admin", name: "Finance Admin" },
-  attendance: { email: "attendance@emblazers.com", password: "12345678", role: "admin", name: "Attendance Admin" },
-  timetable: { email: "timetable@emblazers.com", password: "12345678", role: "admin", name: "Timetable Admin" },
-  datesheet: { email: "datesheet@emblazers.com", password: "12345678", role: "admin", name: "DateSheet Admin" },
-  curriculum: { email: "admin@emblazers.com", password: "12345678", role: "admin", name: "Curriculum Admin" },
-  pos: { email: "pos@emblazers.com", password: "12345678", role: "admin", name: "POS Admin" },
-  library: { email: "library@emblazers.com", password: "12345678", role: "admin", name: "Library Admin" },
-  transport: { email: "transport@emblazers.com", password: "12345678", role: "admin", name: "Transport Admin" },
-  hostel: { email: "hostel@emblazers.com", password: "12345678", role: "admin", name: "Hostel Admin" },
-  reports: { email: "reports@emblazers.com", password: "12345678", role: "admin", name: "Reports Admin" },
-  parent: { email: "parent@emblazers.com", password: "12345678", role: "parent", name: "Parent" },
+  student: { email: "student@emblazersacademy.com", password: "12345678", role: "admin", name: "Student Admin" },
+  hr: { email: "hr@emblazersacademy.com", password: "12345678", role: "admin", name: "HR Admin" },
+  fee: { email: "fee@emblazersacademy.com", password: "12345678", role: "admin", name: "Fee Admin" },
+  payroll: { email: "payroll@emblazersacademy.com", password: "12345678", role: "admin", name: "Payroll Admin" },
+  finance: { email: "finance@emblazersacademy.com", password: "12345678", role: "admin", name: "Finance Admin" },
+  attendance: { email: "attendance@emblazersacademy.com", password: "12345678", role: "admin", name: "Attendance Admin" },
+  timetable: { email: "timetable@emblazersacademy.com", password: "12345678", role: "admin", name: "Timetable Admin" },
+  datesheet: { email: "datesheet@emblazersacademy.com", password: "12345678", role: "admin", name: "DateSheet Admin" },
+  curriculum: { email: "admin@emblazersacademy.com", password: "12345678", role: "admin", name: "Curriculum Admin" },
+  pos: { email: "pos@emblazersacademy.com", password: "12345678", role: "admin", name: "POS Admin" },
+  library: { email: "library@emblazersacademy.com", password: "12345678", role: "admin", name: "Library Admin" },
+  transport: { email: "transport@emblazersacademy.com", password: "12345678", role: "admin", name: "Transport Admin" },
+  hostel: { email: "hostel@emblazersacademy.com", password: "12345678", role: "admin", name: "Hostel Admin" },
+  reports: { email: "reports@emblazersacademy.com", password: "12345678", role: "admin", name: "Reports Admin" },
+  parent: { email: "parent@emblazersacademy.com", password: "12345678", role: "parent", name: "Parent" },
 } as Record<string, { email: string; password: string; role: UserRole; name: string }>;
 
 // ============== AUTH SESSION ==============
