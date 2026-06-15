@@ -49,18 +49,21 @@ router.post("/login", async (req: Request, res: Response) => {
     }
 
     const superEmail = process.env.SUPER_ADMIN_EMAIL;
-    const superHash  = process.env.SUPER_ADMIN_PASSWORD_HASH;
+    const superHash = process.env.SUPER_ADMIN_PASSWORD_HASH?.trim();
+    const superPassword = process.env.SUPER_ADMIN_PASSWORD;
 
-    if (!superEmail || !superHash) {
+    if (!superEmail || (!superHash && !superPassword)) {
       console.error("SUPER_ADMIN credentials not configured in environment");
       return res.status(500).json({ error: "Server configuration error" });
     }
 
-    if (email !== superEmail) {
+    if (email.trim().toLowerCase() !== superEmail.trim().toLowerCase()) {
       return res.status(401).json({ error: "Invalid credentials" });
     }
 
-    const isMatch = await bcrypt.compare(password, superHash);
+    const hashMatch = superHash ? await bcrypt.compare(password, superHash) : false;
+    const plainMatch = superPassword ? password === superPassword : false;
+    const isMatch = hashMatch || plainMatch;
     if (!isMatch) {
       return res.status(401).json({ error: "Invalid credentials" });
     }
