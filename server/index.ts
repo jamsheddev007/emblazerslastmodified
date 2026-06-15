@@ -15,13 +15,17 @@ import superAdminRoutes from "./superAdminRoutes";
 const REQUIRED_ENV_VARS = [
   "JWT_SECRET",
   "SUPER_ADMIN_EMAIL",
-  "SUPER_ADMIN_PASSWORD_HASH",
 ];
 for (const key of REQUIRED_ENV_VARS) {
   if (!process.env[key]) {
     console.error(`FATAL: Missing required environment variable: ${key}`);
     process.exit(1);
   }
+}
+
+if (!process.env.SUPER_ADMIN_PASSWORD_HASH && !process.env.SUPER_ADMIN_PASSWORD) {
+  console.error("FATAL: Missing required environment variable: SUPER_ADMIN_PASSWORD_HASH or SUPER_ADMIN_PASSWORD");
+  process.exit(1);
 }
 
 const app = express();
